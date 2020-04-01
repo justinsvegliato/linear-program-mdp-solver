@@ -17,13 +17,13 @@ def main():
     printer.print_grid_world_domain(grid_world)
 
     print("Setting up the grid world MDP...")
-    ground_mdp = GridWorldMDP(grid_world)
+    mdp = GridWorldMDP(grid_world)
 
     print("Solving the grid world MDP...")
-    ground_solution = cplex_mdp_solver.solve(ground_mdp, 0.99)
+    solution = cplex_mdp_solver.solve(mdp, 0.99)
 
     print("Concrete Grid World Policy:")
-    printer.print_grid_world_policy(grid_world, ground_solution['policy'])
+    printer.print_grid_world_policy(grid_world, solution['policy'])
 
 
 if __name__ == '__main__':
