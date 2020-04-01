@@ -1,10 +1,10 @@
-# linear-program-mdp-solver
+# `linear-program-mdp-solver`
 
 This library is for solving MDPs with linear programming.
 
 ## Installation
 
-To use this library, we have to install the folllowing Python dependencies.
+To use this library, we have to install the following Python dependencies.
 
 ```bash
 pip install numpy
