@@ -28,5 +28,5 @@ printer.print_grid_world_domain(grid_world)
 
 mdp = GridWorldMDP(grid_world)
 
-solution = cplex_mdp_solver.solve(ground_mdp, 0.99)
+solution = cplex_mdp_solver.solve(mdp, 0.99)
 ```
