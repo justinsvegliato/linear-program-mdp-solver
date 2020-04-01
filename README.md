@@ -14,6 +14,9 @@ pip install cplex
 ## Example
 
 ```python
+import cplex_mdp_solver
+from grid_world_mdp import GridWorldMDP
+
 grid_world = [
     ['O', 'O', 'W', 'W', 'O', 'O', 'O', 'W', 'O', 'O', 'O', 'O'],
     ['O', 'O', 'W', 'W', 'O', 'W', 'O', 'W', 'O', 'W', 'O', 'O'],
