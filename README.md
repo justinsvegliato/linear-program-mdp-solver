@@ -17,18 +17,14 @@ pip install cplex
 import cplex_mdp_solver
 from grid_world_mdp import GridWorldMDP
 
-grid_world = [
+mdp = GridWorldMDP([
     ['O', 'O', 'W', 'W', 'O', 'O', 'O', 'W', 'O', 'O', 'O', 'O'],
     ['O', 'O', 'W', 'W', 'O', 'W', 'O', 'W', 'O', 'W', 'O', 'O'],
     ['O', 'O', 'W', 'W', 'O', 'W', 'O', 'O', 'O', 'W', 'O', 'O'],
     ['O', 'O', 'O', 'O', 'O', 'W', 'W', 'W', 'W', 'W', 'O', 'O'],
     ['O', 'O', 'W', 'W', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
     ['O', 'O', 'O', 'O', 'O', 'W', 'W', 'W', 'W', 'W', 'G', 'O']
-]
-
-printer.print_grid_world_domain(grid_world)
-
-mdp = GridWorldMDP(grid_world)
+])
 
 solution = cplex_mdp_solver.solve(mdp, 0.99)
 ```
