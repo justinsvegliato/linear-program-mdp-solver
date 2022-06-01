@@ -1,0 +1,65 @@
+{
+    "name": "lgrc",
+    "locations": {
+        "OFFICE_SHLOMO": {
+            "name": "Shlomo's Office",
+            "pose": {
+                "x": 1.1,
+                "y": 0.0,
+                "theta": 0.0
+            }
+        },
+        "RBR": {
+            "name": "RBR",
+            "pose": {
+                "x": 2.25,
+                "y": 0.0,
+                "theta": 0.0
+            }
+        },
+        "LPR": {
+            "name": "LPR",
+            "pose": {
+                "x": 2.25,
+                "y": 1.0,
+                "theta": 0.0
+            }
+        },
+        "LOBBY": {
+            "name": "Lobby",
+            "pose": {
+                "x": 2.25,
+                "y": 2.0,
+                "theta": 0.0
+            }
+        }
+    },
+    "paths": {
+        "OFFICE_SHLOMO": {
+            "RBR": {
+                "cost": 20
+            }
+        },
+        "RBR": {
+            "OFFICE_SHLOMO": {
+                "cost": 20
+            },
+            "LPR": {
+                "cost": 30
+            }
+        },
+        "LPR": {
+            "RBR": {
+                "cost": 30
+            },
+            "LOBBY": {
+                "cost": 40
+            }
+        },
+        "LOBBY": {
+            "LPR": {
+                "cost": 40
+            }
+        }
+    }
+}
